@@ -1,0 +1,5 @@
+ru\antonov\publisher\dto\PublisherRequestDto.class
+ru\antonov\publisher\PublisherApplication.class
+ru\antonov\publisher\service\PublisherService.class
+ru\antonov\publisher\controller\PublisherController.class
+ru\antonov\publisher\enums\Action.class
