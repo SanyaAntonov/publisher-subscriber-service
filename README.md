@@ -45,7 +45,7 @@ spring.datasource.password=postgres
 
 ```
 **DB SCHEMA (spring.jpa.hibernate.ddl-auto=create-drop)**
-![img.png](img.png)
+## ![img.png](img.png) ##
 
 **4. Run this 2 services in your IDE**
 
