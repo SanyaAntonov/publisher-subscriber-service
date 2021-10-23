@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import ru.antonov.publisher.config.ApplicationSubscriber;
 import ru.antonov.publisher.dto.PublisherRequestDto;
@@ -24,7 +25,6 @@ public class PublisherService {
 
     private final ObjectMapper objectMapper;
     private final ApplicationSubscriber applicationSubscriber;
-
     private final AtomicInteger atomicInteger = new AtomicInteger(0);
     private final HttpClient httpClient = HttpClient.newHttpClient();
     private final Runnable runnable = getRunnable();
@@ -69,6 +69,7 @@ public class PublisherService {
                             .header("Content-Type", "application/json")
                             .build();
                     HttpResponse<String> response = httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());
+                    log.info(Thread.currentThread().getName() + " response code : " + response.statusCode());
                     Thread.sleep(15_000);
                 } catch (IOException | InterruptedException e) {
                     e.printStackTrace();

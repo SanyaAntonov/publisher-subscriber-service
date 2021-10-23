@@ -8,7 +8,7 @@ import ru.antonov.subscriber.model.Subscription;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2021-07-31T11:38:59+0300",
+    date = "2021-10-23T20:58:09+0300",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 15.0.2 (Oracle Corporation)"
 )
 @Component
